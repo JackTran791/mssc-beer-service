@@ -22,7 +22,7 @@ import java.util.UUID;
 public class Beer {
     @Id
     @GeneratedValue(generator = "UUID")
-    @GenericGenerator(name ="UUID", strategy = "org.hibernate.id.UUIDGenerator")
+    @GenericGenerator(name = "UUID", strategy = "org.hibernate.id.UUIDGenerator")
     @Column(length = 36, columnDefinition = "varchar", updatable = false, nullable = false)
     private UUID id;
 
@@ -35,11 +35,13 @@ public class Beer {
 
     @UpdateTimestamp
     private Timestamp lastModifiedDate;
+
     private String beerName;
     private String beerStyle;
 
     @Column(unique = true)
     private Long upc;
+
     private BigDecimal price;
 
     private Integer minOnHand;
