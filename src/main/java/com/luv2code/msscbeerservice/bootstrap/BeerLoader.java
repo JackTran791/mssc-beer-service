@@ -44,7 +44,5 @@ public class BeerLoader implements CommandLineRunner {
                     .price(new BigDecimal("11.95"))
                     .build());
         }
-
-        System.out.println("Loader Beers: " + beerRepository.count());
     }
 }
