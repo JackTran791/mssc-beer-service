@@ -21,7 +21,7 @@ import java.util.UUID;
 @Component
 @ConfigurationProperties(prefix = "sfg.brewery", ignoreUnknownFields = false)
 public class BeerInventoryServiceRestTemplateImpl implements BeerInventoryService {
-    private final String INVENTORY_PATH = "/api/v1/beer/{beerId}/inventory";
+    private static final String INVENTORY_PATH = "/api/v1/beer/{beerId}/inventory";
     private final RestTemplate restTemplate;
 
     private String beerInventoryServiceHost;

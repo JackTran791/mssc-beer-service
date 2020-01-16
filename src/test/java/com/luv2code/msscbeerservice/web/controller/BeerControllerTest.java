@@ -38,7 +38,7 @@ class BeerControllerTest {
     @Test
     void getBeerById() throws Exception {
 
-        BDDMockito.given(beerService.getById(ArgumentMatchers.any())).willReturn(getValidBeerDto());
+        BDDMockito.given(beerService.getById(ArgumentMatchers.any(), ArgumentMatchers.anyBoolean())).willReturn(getValidBeerDto());
 
         mockMvc.perform(MockMvcRequestBuilders.get("/api/v1/beer/" + UUID.randomUUID().toString())
                 .accept(MediaType.APPLICATION_JSON))
@@ -48,7 +48,7 @@ class BeerControllerTest {
     @Test
     void savedNewBeer() throws Exception {
 
-        BDDMockito.given(beerService.getById(ArgumentMatchers.any())).willReturn(getValidBeerDto());
+        BDDMockito.given(beerService.getById(ArgumentMatchers.any(), ArgumentMatchers.anyBoolean())).willReturn(getValidBeerDto());
 
         BeerDto beerDto = getValidBeerDto();
         String beerDtoJson = objectMapper.writeValueAsString(beerDto);
@@ -62,7 +62,7 @@ class BeerControllerTest {
     @Test
     void updatedBeerById() throws Exception {
 
-        BDDMockito.given(beerService.getById(ArgumentMatchers.any())).willReturn(getValidBeerDto());
+        BDDMockito.given(beerService.getById(ArgumentMatchers.any(), ArgumentMatchers.anyBoolean())).willReturn(getValidBeerDto());
 
         BeerDto beerDto = getValidBeerDto();
         String beerDtoJson = objectMapper.writeValueAsString(beerDto);
