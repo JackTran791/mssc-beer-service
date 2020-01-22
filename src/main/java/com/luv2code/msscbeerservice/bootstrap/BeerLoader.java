@@ -11,7 +11,7 @@ import java.util.UUID;
 /**
  * @author Jack Tran
  */
-//@Component
+@Component
 public class BeerLoader implements CommandLineRunner {
 
     public static final String BEER_1_UPC = "0631234200036";
@@ -30,8 +30,7 @@ public class BeerLoader implements CommandLineRunner {
 
     @Override
     public void run(String... args) throws Exception {
-//        Using data.sql file now
-//        loadBeerObject();
+        loadBeerObject();
     }
 
     private void loadBeerObject() {
