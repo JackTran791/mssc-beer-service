@@ -1,4 +1,4 @@
-package com.luv2code.msscbeerservice.services;
+package com.luv2code.msscbeerservice.services.brewing;
 
 import com.luv2code.msscbeerservice.config.JmsConfig;
 import com.luv2code.msscbeerservice.domain.Beer;
